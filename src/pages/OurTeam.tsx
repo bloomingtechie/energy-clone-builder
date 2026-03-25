@@ -78,7 +78,7 @@ const OurTeam = () => (
           The Fund Manager has established an Investment Committee comprising
           senior and experienced professionals, including independent members
           with wide-ranging experience in clean energy investments, risk and
-          fund management. The five members of the IC collectively have more
+          fund management. The four members of the IC collectively have more
           than 100 years of investing and financing experience.
         </p>
 
