@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import cef from "@/assets/cef.png";
+import FundCo from "@/assets/FundCo2.png";
+import rencap from "@/assets/ren-cap.png";
 
 const Footer = () => (
   <footer className="cef-gradient-bg text-primary-foreground py-10">
@@ -7,7 +10,11 @@ const Footer = () => (
         <div>
           {/* Replace src with actual Clean Energy Fund logo */}
           <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3">
-            <span className="text-xs text-primary-foreground/60">CEF Logo</span>
+            <img
+              src={cef}
+              alt="Clean Energy Local Currency Fund"
+              className="h-10 md:h-14 w-auto"
+            />
           </div>
           <p className="text-sm opacity-80">
             Providing local currency funding to climate aligned, sustainable and
@@ -18,19 +25,41 @@ const Footer = () => (
           <h4 className="font-heading font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm opacity-80">
             <li>
-              <Link to="/" className="hover:opacity-100 transition-opacity">Home</Link>
+              <Link to="/" className="hover:opacity-100 transition-opacity">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:opacity-100 transition-opacity">About Us</Link>
+              <Link
+                to="/about"
+                className="hover:opacity-100 transition-opacity"
+              >
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="/our-team" className="hover:opacity-100 transition-opacity">Our Team</Link>
+              <Link
+                to="/our-team"
+                className="hover:opacity-100 transition-opacity"
+              >
+                Our Team
+              </Link>
             </li>
             <li>
-              <Link to="/investors-relation" className="hover:opacity-100 transition-opacity">Investors Relations</Link>
+              <Link
+                to="/investors-relation"
+                className="hover:opacity-100 transition-opacity"
+              >
+                Investors Relations
+              </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:opacity-100 transition-opacity">Contact</Link>
+              <Link
+                to="/contact"
+                className="hover:opacity-100 transition-opacity"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -45,7 +74,7 @@ const Footer = () => (
         <div>
           {/* Replace src with actual FundCo logo */}
           <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3">
-            <span className="text-xs text-primary-foreground/60">FundCo Logo</span>
+            <img src={FundCo} alt="FundCo" className="h-10 md:h-14 w-auto" />
           </div>
           <p className="text-sm opacity-80">
             FundCo is authorised and registered by the Nigeria Securities &
@@ -54,7 +83,11 @@ const Footer = () => (
           </p>
           {/* Replace src with actual Renaissance Capital logo */}
           <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3 mt-6">
-            <span className="text-xs text-primary-foreground/60">Renaissance Capital Logo</span>
+            <img
+              src={rencap}
+              alt="Renaissance Securities"
+              className="h-10 md:h-14 w-auto"
+            />
           </div>
           <p className="text-sm opacity-80">
             Renaissance Securities (Nigeria) Limited is acting as the Issuing
