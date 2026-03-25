@@ -5,7 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
-const subjectOptions = ["Successful fill", "StartUp business", "Leadership work", "Business growth"];
+const subjectOptions = [
+  "Investor Enquiry",
+  "Project Submission",
+  "Strategic Partnership",
+  "Development Finance Partnership",
+  "Media Enquiry",
+  "General Enquiry",
+];
 
 const Contact = () => {
   const { toast } = useToast();
@@ -36,7 +43,7 @@ const Contact = () => {
                   <p className="text-muted-foreground">info@cleanenergyfund.ng</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 mb-8">
                 <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
                   <MapPin className="text-secondary" size={20} />
                 </div>
@@ -46,6 +53,11 @@ const Contact = () => {
                   <p className="text-muted-foreground">5B Water Corporation Way Oniru,</p>
                   <p className="text-muted-foreground">Victoria Island, Lagos.</p>
                 </div>
+              </div>
+              <div className="bg-muted rounded-xl p-6 mt-6">
+                <p className="text-sm text-muted-foreground">
+                  We respond within <strong className="text-foreground">3–5 business days</strong>. For urgent enquiries, please indicate in your subject line.
+                </p>
               </div>
             </div>
 
