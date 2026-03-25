@@ -5,9 +5,10 @@ const Footer = () => (
     <div className="section-container">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h3 className="font-heading font-bold text-lg mb-3">
-            Clean Energy Fund
-          </h3>
+          {/* Replace src with actual Clean Energy Fund logo */}
+          <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3">
+            <span className="text-xs text-primary-foreground/60">CEF Logo</span>
+          </div>
           <p className="text-sm opacity-80">
             Providing local currency funding to climate aligned, sustainable and
             inclusive clean energy infrastructure.
@@ -17,33 +18,19 @@ const Footer = () => (
           <h4 className="font-heading font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm opacity-80">
             <li>
-              <Link to="/" className="hover:opacity-100 transition-opacity">
-                Home
-              </Link>
+              <Link to="/" className="hover:opacity-100 transition-opacity">Home</Link>
             </li>
             <li>
-              <Link
-                to="/our-team"
-                className="hover:opacity-100 transition-opacity"
-              >
-                Our Team
-              </Link>
+              <Link to="/about" className="hover:opacity-100 transition-opacity">About Us</Link>
             </li>
             <li>
-              <Link
-                to="/investors-relation"
-                className="hover:opacity-100 transition-opacity"
-              >
-                Investors Relations
-              </Link>
+              <Link to="/our-team" className="hover:opacity-100 transition-opacity">Our Team</Link>
             </li>
             <li>
-              <Link
-                to="/contact"
-                className="hover:opacity-100 transition-opacity"
-              >
-                Contact
-              </Link>
+              <Link to="/investors-relation" className="hover:opacity-100 transition-opacity">Investors Relations</Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:opacity-100 transition-opacity">Contact</Link>
             </li>
           </ul>
         </div>
@@ -56,17 +43,19 @@ const Footer = () => (
           </p>
         </div>
         <div>
-          <h3 className="font-heading font-bold text-lg mb-3">
-            Fundco Capital Managers
-          </h3>
+          {/* Replace src with actual FundCo logo */}
+          <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3">
+            <span className="text-xs text-primary-foreground/60">FundCo Logo</span>
+          </div>
           <p className="text-sm opacity-80">
             FundCo is authorised and registered by the Nigeria Securities &
             Exchange Commission to act as fund manager for the Clean Energy
             Local Currency Fund.
           </p>
-          <h3 className="font-heading font-bold text-lg mb-3">
-            Renaissance Capital
-          </h3>
+          {/* Replace src with actual Renaissance Capital logo */}
+          <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3 mt-6">
+            <span className="text-xs text-primary-foreground/60">Renaissance Capital Logo</span>
+          </div>
           <p className="text-sm opacity-80">
             Renaissance Securities (Nigeria) Limited is acting as the Issuing
             Housing and Financial Adviser to the Clean Energy Local Currency
