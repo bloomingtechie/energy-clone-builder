@@ -5,9 +5,11 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "About Us", path: "/about" },
-  { label: "Team", path: "/our-team" },
-  { label: "Investors Relations", path: "/investors-relation" },
+  { label: "About", path: "/about" },
+  { label: "Governance", path: "/our-team" },
+  { label: "Investor Relations", path: "/investors-relation" },
+  { label: "Impact", path: "/impact" },
+  { label: "Pipeline", path: "/pipeline-eligibility" },
   { label: "Contact", path: "/contact" },
 ];
 
@@ -26,7 +28,7 @@ const Navbar = () => {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -42,7 +44,7 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <a
             href="https://www.linkedin.com/company/clean-energy-lc-fund"
             target="_blank"
@@ -60,7 +62,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-foreground"
+          className="lg:hidden text-foreground"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -68,7 +70,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden bg-background border-t">
+        <div className="lg:hidden bg-background border-t">
           <nav className="section-container py-4 flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link

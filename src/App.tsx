@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import OurTeam from "./pages/OurTeam";
 import InvestorsRelation from "./pages/InvestorsRelation";
+import Impact from "./pages/Impact";
+import PipelineEligibility from "./pages/PipelineEligibility";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +25,8 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/our-team" element={<OurTeam />} />
             <Route path="/investors-relation" element={<InvestorsRelation />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="/pipeline-eligibility" element={<PipelineEligibility />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
           <Route path="*" element={<NotFound />} />
