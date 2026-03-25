@@ -3,6 +3,7 @@ import { Zap, Flame, Wheat, Radio, Truck, ArrowDown, TrendingUp, BarChart3, Doll
 import heroSolar from "@/assets/hero-solar.jpg";
 import climateBadge from "@/assets/climate-bonds-badge.png";
 import eligibilityImg from "@/assets/eligibility-criteria.png";
+import factsheetPdf from "@/assets/CEF_Factsheet.pdf";
 
 const sectors = [
   { icon: Zap, label: "Energy Access" },
@@ -96,7 +97,11 @@ const Index = () => (
             <p className="text-muted-foreground mb-6">
               The Clean Energy Local Currency Fund treats each investment opportunity on its own merit and designs a suitable transaction structure around it that reflects the risks and particularities of that investment.
             </p>
-            <a href="#" className="inline-block bg-secondary text-secondary-foreground font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm">
+            <a
+              href={factsheetPdf}
+              download="CEF_Factsheet.pdf"
+              className="inline-block bg-secondary text-secondary-foreground font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm"
+            >
               Download FactSheet
             </a>
           </div>
@@ -110,15 +115,22 @@ const Index = () => (
       <div className="section-container grid md:grid-cols-2 gap-12">
         <div>
           <h3 className="font-heading font-bold text-xl text-foreground mb-4">Green Certification</h3>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-6">
             Clean Energy Local Currency Fund has met the criteria and received green certification for its loan portfolio by the Climate Bonds Standard Board on behalf of the Climate Bonds Initiative.
           </p>
+          <div className="w-full h-48 bg-foreground/5 border border-border rounded-xl flex items-center justify-center">
+            <span className="text-muted-foreground text-sm">Green Certification Image Placeholder</span>
+          </div>
         </div>
         <div>
           <h3 className="font-heading font-bold text-xl text-foreground mb-4">Fund Rating</h3>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-6">
             The Clean Energy Fund was assigned an investment grade national scale fund rating with the outlook accorded as Stable.
           </p>
+          <div className="w-full h-48 bg-foreground/5 border border-border rounded-xl flex flex-col items-center justify-center gap-2">
+            <span className="text-4xl md:text-5xl font-heading font-bold text-foreground">GCR/BBB</span>
+            <span className="text-muted-foreground text-sm">Fund Rating Image Placeholder</span>
+          </div>
         </div>
       </div>
     </section>
