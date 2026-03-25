@@ -9,7 +9,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           {/* Replace src with actual Clean Energy Fund logo */}
-          <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3">
+          <div className="h-12 w-40 rounded flex items-center justify-center mb-3">
             <img
               src={cef}
               alt="Clean Energy Local Currency Fund"
@@ -73,7 +73,7 @@ const Footer = () => (
         </div>
         <div>
           {/* Replace src with actual FundCo logo */}
-          <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3">
+          <div className="h-12 w-40 rounded flex items-center justify-center mb-3">
             <img src={FundCo} alt="FundCo" className="h-10 md:h-14 w-auto" />
           </div>
           <p className="text-sm opacity-80">
@@ -82,7 +82,7 @@ const Footer = () => (
             Local Currency Fund.
           </p>
           {/* Replace src with actual Renaissance Capital logo */}
-          <div className="h-12 w-40 bg-primary-foreground/20 rounded flex items-center justify-center mb-3 mt-6">
+          <div className="h-12 w-40 rounded flex items-center justify-center mb-3 mt-6">
             <img
               src={rencap}
               alt="Renaissance Securities"

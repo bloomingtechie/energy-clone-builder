@@ -190,7 +190,7 @@ const Index = () => (
             green certification for its loan portfolio by the Climate Bonds
             Standard Board on behalf of the Climate Bonds Initiative.
           </p>
-          <div className="w-full h-48 bg-foreground/5 border border-border rounded-xl flex items-center justify-center">
+          <div className="w-full h-48 border border-border rounded-xl flex items-center justify-center">
             <img
               src={climateBadge}
               alt="Climate Bonds Standard Certified"
