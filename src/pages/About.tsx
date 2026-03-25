@@ -51,6 +51,11 @@ const investorTypes = [
 
 const About = () => (
   <div>
+    <SEO
+      title="About CeF"
+      description="Learn about the Clean Energy Local Currency Fund — a blended finance vehicle mobilising Nigerian institutional capital for climate-aligned infrastructure investment."
+      path="/about"
+    />
     <PageBanner title="About CeF" />
 
     {/* Fund Description */}

@@ -39,6 +39,11 @@ const paradigmShift = [
 
 const Impact = () => (
   <div>
+    <SEO
+      title="Impact & Additionality"
+      description="Discover CeF's climate and development impact — 21,000+ tonnes CO₂ avoided, 370+ jobs created, 5,000+ energy connections enabled across Nigeria."
+      path="/impact"
+    />
     <PageBanner title="Impact & Additionality" />
 
     {/* Climate Impact */}

@@ -27,6 +27,11 @@ const Contact = () => {
 
   return (
     <div>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with the Clean Energy Local Currency Fund for investor enquiries, project submissions, strategic partnerships, and media requests."
+        path="/contact"
+      />
       <PageBanner title="Contact" />
 
       <section className="py-16 md:py-24">
