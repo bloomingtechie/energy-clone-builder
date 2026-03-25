@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageBanner from "@/components/PageBanner";
+import SEO from "@/components/SEO";
 import factsheetPdf from "@/assets/CEF_Factsheet.pdf";
 import leadway from "@/assets/leadway.png";
 import nlpc from "@/assets/nlpc.png";
@@ -50,6 +51,11 @@ const InvestorsRelation = () => {
 
   return (
     <div>
+      <SEO
+        title="Investor Relations"
+        description="Access fund performance data, investor base details, dividend history, and downloadable documents for the Clean Energy Local Currency Fund."
+        path="/investors-relation"
+      />
       <PageBanner title="Investor Relations" />
 
       <section className="py-16 md:py-24">

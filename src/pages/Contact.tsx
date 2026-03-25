@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, MapPin } from "lucide-react";
+import SEO from "@/components/SEO";
 import PageBanner from "@/components/PageBanner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,11 @@ const Contact = () => {
 
   return (
     <div>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with the Clean Energy Local Currency Fund for investor enquiries, project submissions, strategic partnerships, and media requests."
+        path="/contact"
+      />
       <PageBanner title="Contact" />
 
       <section className="py-16 md:py-24">

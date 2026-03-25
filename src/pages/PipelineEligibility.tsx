@@ -1,4 +1,5 @@
 import PageBanner from "@/components/PageBanner";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import {
   Zap,
@@ -49,6 +50,11 @@ const submissionSteps = [
 
 const PipelineEligibility = () => (
   <div>
+    <SEO
+      title="Pipeline & Eligibility"
+      description="Submit eligible clean energy and infrastructure projects for CeF financing. Review sector eligibility criteria, document requirements, and the submission process."
+      path="/pipeline-eligibility"
+    />
     <PageBanner title="Pipeline & Eligibility" />
 
     {/* Eligible Projects */}

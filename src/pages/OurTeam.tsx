@@ -1,4 +1,5 @@
 import PageBanner from "@/components/PageBanner";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import {
   CheckCircle2,
@@ -60,6 +61,11 @@ const governanceProcess = [
 
 const OurTeam = () => (
   <div>
+    <SEO
+      title="Governance & Team"
+      description="Meet the Investment Committee and governance structure of the Clean Energy Local Currency Fund. Experienced professionals in infrastructure, finance, and climate investment."
+      path="/our-team"
+    />
     <PageBanner title="Governance" />
 
     {/* Investment Committee */}

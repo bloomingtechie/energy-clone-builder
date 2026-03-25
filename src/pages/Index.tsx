@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 import {
   Zap,
   Flame,
@@ -71,6 +72,21 @@ const ctaBlocks = [
 
 const Index = () => (
   <div>
+    <SEO
+      title="Clean Energy Local Currency Fund (CeF) | Climate Infrastructure Investment in Nigeria"
+      description="CeF mobilises domestic institutional capital to finance climate-aligned infrastructure across Nigeria. Long-term naira financing for clean energy, reducing FX risk and unlocking private capital."
+      path="/"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "InvestmentFund",
+        "name": "Clean Energy Local Currency Fund",
+        "alternateName": "CeF",
+        "description": "A Nigeria-focused climate infrastructure fund providing long-term local currency financing for clean energy and sustainable infrastructure projects.",
+        "url": "https://cleanenergyfund.ng",
+        "areaServed": "Nigeria",
+        "knowsAbout": ["Climate Finance", "Clean Energy", "Infrastructure Investment", "Renewable Energy", "Local Currency Financing"]
+      }}
+    />
     {/* Hero */}
     <section
       className="relative min-h-[90vh] flex items-center bg-cover bg-center"
