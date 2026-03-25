@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PageBanner from "@/components/PageBanner";
 import SEO from "@/components/SEO";
-import factsheetPdf from "@/assets/CEF_Factsheet.pdf";
+import factsheetPdf from "@/assets/CeF-lc.pdf";
 import leadway from "@/assets/leadway.png";
 import nlpc from "@/assets/nlpc.png";
 import fcmb from "@/assets/fcmb.png";
@@ -40,7 +40,7 @@ const impactVideos = [
 ];
 
 const documents = [
-  { name: "Fund Factsheet", file: factsheetPdf, filename: "CEF_Factsheet.pdf" },
+  { name: "Fund Factsheet", file: factsheetPdf, filename: "CeF-lc.pdf" },
 ];
 
 const getYouTubeEmbedUrl = (videoId: string) =>

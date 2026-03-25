@@ -22,13 +22,25 @@ import {
 } from "lucide-react";
 import heroSolar from "@/assets/hero-solar.jpg";
 import climateBadge from "@/assets/climate-bonds-badge.png";
-import factsheetPdf from "@/assets/CEF_Factsheet.pdf";
+import factsheetPdf from "@/assets/CeF-lc.pdf";
 
 const sectors = [
   { icon: Zap, label: "Energy Access", desc: "Mini-grids, solar home systems" },
-  { icon: Flame, label: "Clean Cooking", desc: "LPG, biogas, electric cooking" },
-  { icon: Radio, label: "Telecommunications", desc: "Tower & connectivity infrastructure" },
-  { icon: Truck, label: "Transportation", desc: "Including e-mobility solutions" },
+  {
+    icon: Flame,
+    label: "Clean Cooking",
+    desc: "LPG, biogas, electric cooking",
+  },
+  {
+    icon: Radio,
+    label: "Telecommunications",
+    desc: "Tower & connectivity infrastructure",
+  },
+  {
+    icon: Truck,
+    label: "Transportation",
+    desc: "Including e-mobility solutions",
+  },
   { icon: Wheat, label: "Agro-Processing", desc: "Productive use of energy" },
 ];
 
@@ -56,18 +68,57 @@ const whyNow = [
 ];
 
 const portfolioItems = [
-  { title: "E-Mobility", desc: "Deployment of electric 2-wheelers, 3-wheelers, and charging/swapping infrastructure for urban and rural logistics" },
-  { title: "Mini-Grids", desc: "Renewable energy systems supporting rural electrification across underserved communities" },
-  { title: "Solar Home Systems", desc: "Asset-backed platforms providing distributed solar solutions to households" },
-  { title: "Telecom Infrastructure", desc: "Tower infrastructure for mobile and internet connectivity expansion" },
-  { title: "Agro-Processing", desc: "Equipment enabling productive use of energy in rural communities" },
+  {
+    title: "E-Mobility",
+    desc: "Deployment of electric 2-wheelers, 3-wheelers, and charging/swapping infrastructure for urban and rural logistics",
+  },
+  {
+    title: "Mini-Grids",
+    desc: "Renewable energy systems supporting rural electrification across underserved communities",
+  },
+  {
+    title: "Solar Home Systems",
+    desc: "Asset-backed platforms providing distributed solar solutions to households",
+  },
+  {
+    title: "Telecom Infrastructure",
+    desc: "Tower infrastructure for mobile and internet connectivity expansion",
+  },
+  {
+    title: "Agro-Processing",
+    desc: "Equipment enabling productive use of energy in rural communities",
+  },
 ];
 
 const ctaBlocks = [
-  { icon: TrendingUp, title: "Investors", desc: "Access institutional climate infrastructure opportunities", link: "/contact", label: "Learn More" },
-  { icon: Building2, title: "Project Sponsors", desc: "Submit eligible projects for financing", link: "/pipeline-eligibility", label: "Submit Project" },
-  { icon: Globe, title: "DFIs", desc: "Partner on blended finance and climate impact", link: "/contact", label: "Get in Touch" },
-  { icon: Handshake, title: "Strategic Partners", desc: "Collaborate on pipeline and ecosystem development", link: "/contact", label: "Partner With Us" },
+  {
+    icon: TrendingUp,
+    title: "Investors",
+    desc: "Access institutional climate infrastructure opportunities",
+    link: "/contact",
+    label: "Learn More",
+  },
+  {
+    icon: Building2,
+    title: "Project Sponsors",
+    desc: "Submit eligible projects for financing",
+    link: "/pipeline-eligibility",
+    label: "Submit Project",
+  },
+  {
+    icon: Globe,
+    title: "DFIs",
+    desc: "Partner on blended finance and climate impact",
+    link: "/contact",
+    label: "Get in Touch",
+  },
+  {
+    icon: Handshake,
+    title: "Strategic Partners",
+    desc: "Collaborate on pipeline and ecosystem development",
+    link: "/contact",
+    label: "Partner With Us",
+  },
 ];
 
 const Index = () => (
@@ -79,12 +130,19 @@ const Index = () => (
       jsonLd={{
         "@context": "https://schema.org",
         "@type": "InvestmentFund",
-        "name": "Clean Energy Local Currency Fund",
-        "alternateName": "CeF",
-        "description": "A Nigeria-focused climate infrastructure fund providing long-term local currency financing for clean energy and sustainable infrastructure projects.",
-        "url": "https://cleanenergyfund.ng",
-        "areaServed": "Nigeria",
-        "knowsAbout": ["Climate Finance", "Clean Energy", "Infrastructure Investment", "Renewable Energy", "Local Currency Financing"]
+        name: "Clean Energy Local Currency Fund",
+        alternateName: "CeF",
+        description:
+          "A Nigeria-focused climate infrastructure fund providing long-term local currency financing for clean energy and sustainable infrastructure projects.",
+        url: "https://cleanenergyfund.ng",
+        areaServed: "Nigeria",
+        knowsAbout: [
+          "Climate Finance",
+          "Clean Energy",
+          "Infrastructure Investment",
+          "Renewable Energy",
+          "Local Currency Financing",
+        ],
       }}
     />
     {/* Hero */}
@@ -102,10 +160,15 @@ const Index = () => (
       <div className="section-container relative z-10 flex flex-col lg:flex-row items-center gap-12 py-20">
         <div className="flex-1 max-w-2xl">
           <h1 className="text-3xl md:text-5xl lg:text-[3.2rem] leading-tight font-heading font-bold text-primary-foreground mb-6">
-            Financing Nigeria's energy transition through local currency climate infrastructure investment
+            Financing Nigeria's energy transition through local currency climate
+            infrastructure investment
           </h1>
           <p className="text-primary-foreground/85 text-base md:text-lg mb-8 leading-relaxed">
-            The Clean Energy Local Currency Fund (CeF) mobilises domestic institutional capital to finance climate-aligned infrastructure across Nigeria. By providing long-term naira financing, CeF reduces foreign exchange risk, unlocks private capital, and supports inclusive economic growth.
+            The Clean Energy Local Currency Fund (CeF) mobilises domestic
+            institutional capital to finance climate-aligned infrastructure
+            across Nigeria. By providing long-term naira financing, CeF reduces
+            foreign exchange risk, unlocks private capital, and supports
+            inclusive economic growth.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
@@ -147,8 +210,12 @@ const Index = () => (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {impactMetrics.map((m) => (
             <div key={m.label}>
-              <p className="text-3xl md:text-4xl font-heading font-bold text-secondary">{m.value}</p>
-              <p className="text-primary-foreground/80 text-sm mt-1">{m.label}</p>
+              <p className="text-3xl md:text-4xl font-heading font-bold text-secondary">
+                {m.value}
+              </p>
+              <p className="text-primary-foreground/80 text-sm mt-1">
+                {m.label}
+              </p>
             </div>
           ))}
         </div>
@@ -161,23 +228,39 @@ const Index = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="bg-background rounded-xl p-6 text-center shadow-sm">
             <ShieldCheck className="text-secondary mx-auto mb-3" size={32} />
-            <h4 className="font-heading font-bold text-foreground text-sm mb-1">Climate Bonds Certified</h4>
-            <p className="text-xs text-muted-foreground">Portfolio-level green certification by CBI</p>
+            <h4 className="font-heading font-bold text-foreground text-sm mb-1">
+              Climate Bonds Certified
+            </h4>
+            <p className="text-xs text-muted-foreground">
+              Portfolio-level green certification by CBI
+            </p>
           </div>
           <div className="bg-background rounded-xl p-6 text-center shadow-sm">
             <BarChart3 className="text-secondary mx-auto mb-3" size={32} />
-            <h4 className="font-heading font-bold text-foreground text-sm mb-1">GCR BBB Rating</h4>
-            <p className="text-xs text-muted-foreground">Investment grade national scale rating</p>
+            <h4 className="font-heading font-bold text-foreground text-sm mb-1">
+              GCR BBB Rating
+            </h4>
+            <p className="text-xs text-muted-foreground">
+              Investment grade national scale rating
+            </p>
           </div>
           <div className="bg-background rounded-xl p-6 text-center shadow-sm">
             <BarChart3 className="text-secondary mx-auto mb-3" size={32} />
-            <h4 className="font-heading font-bold text-foreground text-sm mb-1">Agusto BBB Rating</h4>
-            <p className="text-xs text-muted-foreground">International scale rating by Agusto & Co</p>
+            <h4 className="font-heading font-bold text-foreground text-sm mb-1">
+              Agusto BBB Rating
+            </h4>
+            <p className="text-xs text-muted-foreground">
+              International scale rating by Agusto & Co
+            </p>
           </div>
           <div className="bg-background rounded-xl p-6 text-center shadow-sm">
             <Building2 className="text-secondary mx-auto mb-3" size={32} />
-            <h4 className="font-heading font-bold text-foreground text-sm mb-1">SEC Regulated</h4>
-            <p className="text-xs text-muted-foreground">FundCo Capital Managers Limited</p>
+            <h4 className="font-heading font-bold text-foreground text-sm mb-1">
+              SEC Regulated
+            </h4>
+            <p className="text-xs text-muted-foreground">
+              FundCo Capital Managers Limited
+            </p>
           </div>
         </div>
       </div>
@@ -191,8 +274,14 @@ const Index = () => (
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {whyLocalCurrency.map((item) => (
-            <div key={item} className="flex items-start gap-3 p-4 rounded-lg bg-muted">
-              <CheckCircle2 className="text-secondary flex-shrink-0 mt-0.5" size={20} />
+            <div
+              key={item}
+              className="flex items-start gap-3 p-4 rounded-lg bg-muted"
+            >
+              <CheckCircle2
+                className="text-secondary flex-shrink-0 mt-0.5"
+                size={20}
+              />
               <p className="text-sm text-foreground">{item}</p>
             </div>
           ))}
@@ -221,7 +310,9 @@ const Index = () => (
               <span className="font-heading font-semibold text-sm text-center text-foreground">
                 {s.label}
               </span>
-              <span className="text-xs text-muted-foreground text-center">{s.desc}</span>
+              <span className="text-xs text-muted-foreground text-center">
+                {s.desc}
+              </span>
             </div>
           ))}
         </div>
@@ -235,7 +326,11 @@ const Index = () => (
           Why CeF Is Additional
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Commercial financing in Nigeria often does not provide long-term local currency funding for infrastructure projects due to FX risk, tenor limitations, and perceived credit risks. CeF addresses this gap by structuring investments that combine credit enhancement, blended finance, and institutional capital mobilisation.
+          Commercial financing in Nigeria often does not provide long-term local
+          currency funding for infrastructure projects due to FX risk, tenor
+          limitations, and perceived credit risks. CeF addresses this gap by
+          structuring investments that combine credit enhancement, blended
+          finance, and institutional capital mobilisation.
         </p>
       </div>
     </section>
@@ -248,8 +343,14 @@ const Index = () => (
         </h2>
         <div className="space-y-3">
           {whyNow.map((item) => (
-            <div key={item} className="flex items-start gap-3 p-4 rounded-lg bg-background">
-              <ArrowRight className="text-secondary flex-shrink-0 mt-0.5" size={18} />
+            <div
+              key={item}
+              className="flex items-start gap-3 p-4 rounded-lg bg-background"
+            >
+              <ArrowRight
+                className="text-secondary flex-shrink-0 mt-0.5"
+                size={18}
+              />
               <p className="text-sm text-foreground">{item}</p>
             </div>
           ))}
@@ -264,17 +365,36 @@ const Index = () => (
           How CeF Works
         </h2>
         <p className="text-primary-foreground/80 text-center mb-10 max-w-2xl mx-auto">
-          CeF operates in partnership with InfraCredit under the Clean Energy Funding Programme (CEFP):
+          CeF operates in partnership with InfraCredit under the Clean Energy
+          Funding Programme (CEFP):
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {[
-            { icon: ShieldCheck, text: "InfraCredit provides AAA-rated guarantees to de-risk investments" },
-            { icon: Layers, text: "CeF provides subordinated or bridge capital" },
-            { icon: Users, text: "Pension funds and insurance companies provide senior debt financing" },
-            { icon: TrendingUp, text: "The model unlocks scalable local currency financing for clean energy projects" },
+            {
+              icon: ShieldCheck,
+              text: "InfraCredit provides AAA-rated guarantees to de-risk investments",
+            },
+            {
+              icon: Layers,
+              text: "CeF provides subordinated or bridge capital",
+            },
+            {
+              icon: Users,
+              text: "Pension funds and insurance companies provide senior debt financing",
+            },
+            {
+              icon: TrendingUp,
+              text: "The model unlocks scalable local currency financing for clean energy projects",
+            },
           ].map((item) => (
-            <div key={item.text} className="bg-primary-foreground/10 backdrop-blur rounded-xl p-6 flex items-start gap-4">
-              <item.icon className="text-secondary flex-shrink-0 mt-1" size={24} />
+            <div
+              key={item.text}
+              className="bg-primary-foreground/10 backdrop-blur rounded-xl p-6 flex items-start gap-4"
+            >
+              <item.icon
+                className="text-secondary flex-shrink-0 mt-1"
+                size={24}
+              />
               <p className="text-primary-foreground text-sm">{item.text}</p>
             </div>
           ))}
@@ -290,8 +410,13 @@ const Index = () => (
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioItems.map((item) => (
-            <div key={item.title} className="border border-border rounded-xl p-6 hover:shadow-md transition-shadow">
-              <h4 className="font-heading font-bold text-foreground mb-2">{item.title}</h4>
+            <div
+              key={item.title}
+              className="border border-border rounded-xl p-6 hover:shadow-md transition-shadow"
+            >
+              <h4 className="font-heading font-bold text-foreground mb-2">
+                {item.title}
+              </h4>
               <p className="text-sm text-muted-foreground">{item.desc}</p>
             </div>
           ))}
@@ -306,12 +431,15 @@ const Index = () => (
           Got a project? Check our eligibility criteria.
         </h2>
         <p className="text-muted-foreground mb-8">
-          The Clean Energy Local Currency Fund treats each investment opportunity on its own merit and designs a suitable transaction structure that reflects the risks and particularities of that investment.
+          The Clean Energy Local Currency Fund treats each investment
+          opportunity on its own merit and designs a suitable transaction
+          structure that reflects the risks and particularities of that
+          investment.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href={factsheetPdf}
-            download="CEF_Factsheet.pdf"
+            download="CeF-lc.pdf"
             className="inline-block bg-secondary text-secondary-foreground font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm"
           >
             Download Factsheet
@@ -355,13 +483,16 @@ const Index = () => (
           </h3>
           <p className="text-muted-foreground mb-6">
             The Clean Energy Fund was assigned an investment grade national
-            scale fund rating by GCR and an international scale rating by Agusto & Co, both with a Stable outlook.
+            scale fund rating by GCR and an international scale rating by Agusto
+            & Co, both with a Stable outlook.
           </p>
           <div className="w-full h-48 bg-foreground/5 border border-border rounded-xl flex flex-col items-center justify-center gap-2">
             <span className="text-4xl md:text-5xl font-heading font-bold text-foreground">
               GCR/BBB
             </span>
-            <span className="text-sm text-muted-foreground">Investment Grade · Stable Outlook</span>
+            <span className="text-sm text-muted-foreground">
+              Investment Grade · Stable Outlook
+            </span>
           </div>
         </div>
       </div>
@@ -375,10 +506,17 @@ const Index = () => (
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {ctaBlocks.map((cta) => (
-            <div key={cta.title} className="bg-background rounded-xl p-6 flex flex-col shadow-sm">
+            <div
+              key={cta.title}
+              className="bg-background rounded-xl p-6 flex flex-col shadow-sm"
+            >
               <cta.icon className="text-secondary mb-4" size={28} />
-              <h4 className="font-heading font-bold text-foreground mb-2">{cta.title}</h4>
-              <p className="text-sm text-muted-foreground mb-4 flex-1">{cta.desc}</p>
+              <h4 className="font-heading font-bold text-foreground mb-2">
+                {cta.title}
+              </h4>
+              <p className="text-sm text-muted-foreground mb-4 flex-1">
+                {cta.desc}
+              </p>
               <Link
                 to={cta.link}
                 className="text-sm font-semibold text-secondary hover:underline inline-flex items-center gap-1"
