@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, MapPin } from "lucide-react";
+import SEO from "@/components/SEO";
 import PageBanner from "@/components/PageBanner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";

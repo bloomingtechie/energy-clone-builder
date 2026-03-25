@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageBanner from "@/components/PageBanner";
+import SEO from "@/components/SEO";
 import factsheetPdf from "@/assets/CEF_Factsheet.pdf";
 import leadway from "@/assets/leadway.png";
 import nlpc from "@/assets/nlpc.png";
