@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import heroSolar from "@/assets/hero-solar.jpg";
 import climateBadge from "@/assets/climate-bonds-badge.png";
-import factsheetPdf from "@/assets/CeF-lc.pdf";
+import factsheetPdf from "@/assets/Factsheet-26032026.pdf";
 
 const sectors = [
   { icon: Zap, label: "Energy Access", desc: "Mini-grids, solar home systems" },
@@ -439,7 +439,7 @@ const Index = () => (
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href={factsheetPdf}
-            download="CeF-lc.pdf"
+            download="Factsheet-26032026.pdf"
             className="inline-block bg-secondary text-secondary-foreground font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm"
           >
             Download Factsheet

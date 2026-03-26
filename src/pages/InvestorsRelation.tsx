@@ -1,7 +1,8 @@
 import { useState } from "react";
 import PageBanner from "@/components/PageBanner";
 import SEO from "@/components/SEO";
-import factsheetPdf from "@/assets/CeF-lc.pdf";
+import factsheetPdf from "@/assets/Factsheet-26032026.pdf";
+import aboutPdf from "@/assets/CeF-lc.pdf";
 import leadway from "@/assets/leadway.png";
 import nlpc from "@/assets/nlpc.png";
 import fcmb from "@/assets/fcmb.png";
@@ -24,7 +25,11 @@ const investors = [
   { name: "NLPC Pension Fund Administrators Limited", pct: "15%", image: nlpc },
   { name: "FCMB Pensions Limited", pct: "15%", image: fcmb },
   { name: "Access ARM Pensions Limited", pct: "30%", image: access },
-  { name: "All On Partnerships for Energy Access Limited", pct: "9%", image: allon },
+  {
+    name: "All On Partnerships for Energy Access Limited",
+    pct: "9%",
+    image: allon,
+  },
   { name: "Oak Pensions Limited", pct: "6%", image: oak },
   { name: "CardinalStone Pensions", pct: "5%", image: Cardinal },
   { name: "FundCo Capital Managers Limited", pct: "5%", image: fundco },
@@ -39,12 +44,14 @@ const impactVideos = [
   {
     title: "GroSolar & CeF",
     type: "iframe" as const,
-    embedUrl: "https://drive.google.com/file/d/1xAemYMZWNuydV7o3HZ-_h4gxomwUhA8m/preview",
+    embedUrl:
+      "https://drive.google.com/file/d/1xAemYMZWNuydV7o3HZ-_h4gxomwUhA8m/preview",
   },
   {
     title: "CeF Impact Story",
     type: "iframe" as const,
-    embedUrl: "https://drive.google.com/file/d/1f9jv9k9LO53s2NQ2EusBeqITGNVmqEYS/preview",
+    embedUrl:
+      "https://drive.google.com/file/d/1f9jv9k9LO53s2NQ2EusBeqITGNVmqEYS/preview",
   },
   {
     title: "CEF Impact Story Pass 4",
@@ -54,7 +61,12 @@ const impactVideos = [
 ];
 
 const documents = [
-  { name: "Fund Factsheet", file: factsheetPdf, filename: "CeF-lc.pdf" },
+  { name: "About Fund", file: aboutPdf, filename: "CeF-lc.pdf" },
+  {
+    name: "Fund Factsheet",
+    file: factsheetPdf,
+    filename: "Factsheet-26032026.pdf",
+  },
 ];
 const InvestorsRelation = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -74,7 +86,11 @@ const InvestorsRelation = () => {
             Investor Information
           </h2>
           <p className="text-muted-foreground max-w-3xl mb-12">
-            This section provides key information for current and prospective investors, including fund structure, investor base, performance indicators, and downloadable materials. CeF's diversified investor base of pension funds and institutional asset managers demonstrates strong domestic participation in Nigeria's clean energy transition.
+            This section provides key information for current and prospective
+            investors, including fund structure, investor base, performance
+            indicators, and downloadable materials. CeF's diversified investor
+            base of pension funds and institutional asset managers demonstrates
+            strong domestic participation in Nigeria's clean energy transition.
           </p>
 
           <div className="flex flex-col lg:flex-row gap-8">
@@ -110,31 +126,51 @@ const InvestorsRelation = () => {
 const InvestorsTable = () => (
   <div>
     <p className="text-sm text-muted-foreground mb-4">
-      This diversified investor base reflects strong institutional confidence in CeF's ability to deliver stable returns from climate-aligned infrastructure investments.
+      This diversified investor base reflects strong institutional confidence in
+      CeF's ability to deliver stable returns from climate-aligned
+      infrastructure investments.
     </p>
     <div className="overflow-x-auto">
       <table className="w-full border-collapse">
         <thead>
           <tr className="cef-gradient-bg text-primary-foreground">
-            <th className="px-4 py-3 text-left text-sm font-semibold">Investor Logo</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold">Investor</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold">Percentage Holding</th>
+            <th className="px-4 py-3 text-left text-sm font-semibold">
+              Investor Logo
+            </th>
+            <th className="px-4 py-3 text-left text-sm font-semibold">
+              Investor
+            </th>
+            <th className="px-4 py-3 text-left text-sm font-semibold">
+              Percentage Holding
+            </th>
           </tr>
         </thead>
         <tbody>
           {investors.map((inv, i) => (
-            <tr key={inv.name} className={i % 2 === 0 ? "bg-muted" : "bg-background"}>
+            <tr
+              key={inv.name}
+              className={i % 2 === 0 ? "bg-muted" : "bg-background"}
+            >
               <td className="px-4 py-3">
                 <div className="w-16 h-10 bg-muted-foreground/10 rounded flex items-center justify-center">
-                  <img src={inv.image} alt={inv.name} className="h-10 md:h-14 w-auto" loading="lazy" />
+                  <img
+                    src={inv.image}
+                    alt={inv.name}
+                    className="h-10 md:h-14 w-auto"
+                    loading="lazy"
+                  />
                 </div>
               </td>
               <td className="px-4 py-3 text-sm text-foreground">{inv.name}</td>
-              <td className="px-4 py-3 text-sm text-foreground font-medium">{inv.pct}</td>
+              <td className="px-4 py-3 text-sm text-foreground font-medium">
+                {inv.pct}
+              </td>
             </tr>
           ))}
           <tr className="bg-muted font-bold">
-            <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>Total</td>
+            <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>
+              Total
+            </td>
             <td className="px-4 py-3 text-sm text-foreground">100%</td>
           </tr>
         </tbody>
@@ -160,7 +196,9 @@ const ImpactStoryTab = () => (
             className="w-full h-full border-0"
           />
         </div>
-        <p className="text-sm text-muted-foreground text-center mt-4">{video.title}</p>
+        <p className="text-sm text-muted-foreground text-center mt-4">
+          {video.title}
+        </p>
       </div>
     ))}
   </div>
@@ -169,28 +207,41 @@ const ImpactStoryTab = () => (
 const DividendTable = () => (
   <div>
     <p className="text-sm text-muted-foreground mb-4">
-      Dividend distributions reflect underlying project cash flows and portfolio performance. CeF is committed to delivering consistent, risk-adjusted returns to its investors.
+      Dividend distributions reflect underlying project cash flows and portfolio
+      performance. CeF is committed to delivering consistent, risk-adjusted
+      returns to its investors.
     </p>
     <div className="overflow-x-auto">
       <table className="w-full border-collapse">
         <thead>
           <tr className="cef-gradient-bg text-primary-foreground">
             <th className="px-4 py-3 text-left text-sm font-semibold">S/N</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold">Payment Date</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold">Dividend Paid (₦)</th>
+            <th className="px-4 py-3 text-left text-sm font-semibold">
+              Payment Date
+            </th>
+            <th className="px-4 py-3 text-left text-sm font-semibold">
+              Dividend Paid (₦)
+            </th>
           </tr>
         </thead>
         <tbody>
           {dividends.map((d) => (
-            <tr key={d.sn} className={d.sn % 2 === 0 ? "bg-background" : "bg-muted"}>
+            <tr
+              key={d.sn}
+              className={d.sn % 2 === 0 ? "bg-background" : "bg-muted"}
+            >
               <td className="px-4 py-3 text-sm text-foreground">{d.sn}</td>
               <td className="px-4 py-3 text-sm text-foreground">{d.date}</td>
               <td className="px-4 py-3 text-sm text-foreground">{d.amount}</td>
             </tr>
           ))}
           <tr className="bg-muted font-bold">
-            <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>Total</td>
-            <td className="px-4 py-3 text-sm text-foreground">730,000,000.00</td>
+            <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>
+              Total
+            </td>
+            <td className="px-4 py-3 text-sm text-foreground">
+              730,000,000.00
+            </td>
           </tr>
         </tbody>
       </table>
@@ -201,7 +252,9 @@ const DividendTable = () => (
 const DocumentsTab = () => (
   <div className="space-y-4">
     <p className="text-sm text-muted-foreground mb-4">
-      Download key fund documents for review. Additional documents including the prospectus, impact brief, and governance summary will be made available shortly.
+      Download key fund documents for review. Additional documents including the
+      prospectus, impact brief, and governance summary will be made available
+      shortly.
     </p>
     {documents.map((doc) => (
       <a
@@ -211,26 +264,34 @@ const DocumentsTab = () => (
         className="flex items-center gap-4 bg-muted rounded-lg p-4 hover:shadow-md transition-shadow"
       >
         <FileText className="text-secondary flex-shrink-0" size={24} />
-        <span className="text-sm font-medium text-foreground flex-1">{doc.name}</span>
+        <span className="text-sm font-medium text-foreground flex-1">
+          {doc.name}
+        </span>
         <Download className="text-muted-foreground" size={18} />
       </a>
     ))}
     <div className="bg-muted rounded-lg p-4 opacity-60">
       <div className="flex items-center gap-4">
         <FileText className="text-muted-foreground flex-shrink-0" size={24} />
-        <span className="text-sm text-muted-foreground flex-1">Prospectus — Coming Soon</span>
+        <span className="text-sm text-muted-foreground flex-1">
+          Prospectus — Coming Soon
+        </span>
       </div>
     </div>
     <div className="bg-muted rounded-lg p-4 opacity-60">
       <div className="flex items-center gap-4">
         <FileText className="text-muted-foreground flex-shrink-0" size={24} />
-        <span className="text-sm text-muted-foreground flex-1">Impact Brief — Coming Soon</span>
+        <span className="text-sm text-muted-foreground flex-1">
+          Impact Brief — Coming Soon
+        </span>
       </div>
     </div>
     <div className="bg-muted rounded-lg p-4 opacity-60">
       <div className="flex items-center gap-4">
         <FileText className="text-muted-foreground flex-shrink-0" size={24} />
-        <span className="text-sm text-muted-foreground flex-1">Governance Summary — Coming Soon</span>
+        <span className="text-sm text-muted-foreground flex-1">
+          Governance Summary — Coming Soon
+        </span>
       </div>
     </div>
   </div>

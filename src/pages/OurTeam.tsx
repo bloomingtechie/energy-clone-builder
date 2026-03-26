@@ -14,6 +14,8 @@ import abiodun from "@/assets/abiodun.png";
 import alli from "@/assets/alli.png";
 import humprehy from "@/assets/humprehy.png";
 import wella from "@/assets/wella.png";
+import emi from "@/assets/emi.png";
+import ojuru from "@/assets/ojuru.png";
 
 const investmentCommittee = [
   {
@@ -36,27 +38,59 @@ const investmentCommittee = [
     image: abiodun,
     bio: "Founder and Managing Director of FundCo Capital Managers. Consultant on the Clean Energy Funding Program with InfraCredit. Brings decades of structured finance and fund management expertise.",
   },
+  {
+    name: "Emi Agaba-Oloja",
+    image: emi,
+    bio: "Chief Executive at Stanbic IBTC Trustees Limited.",
+  },
+  {
+    name: "Ojuru Adeniji",
+    image: ojuru,
+    bio: "Sector Lead, Digital Infrastucture & Green Growth, InfraCredit.",
+  },
 ];
 
 const advisers = [
-  { role: "Legal Adviser", name: "Dentons ACAS-Law" },
-  { role: "Financial Adviser", name: "Renaissance Securities (Nigeria) Limited" },
+  { role: "Legal Adviser", name: "Olaniwun Ajayi LP" },
+  { role: "Financial Adviser", name: "FSDH Capital Ltd and FCMB" },
   { role: "Auditor", name: "PricewaterhouseCoopers" },
-  { role: "Custodian", name: "Stanbic IBTC" },
+  { role: "Trustee", name: "Stanbic IBTC" },
   { role: "Registrar", name: "Africa Prudential" },
 ];
 
 const partners = [
-  { name: "InfraCredit", desc: "Provides AAA-rated guarantees under the Clean Energy Funding Programme (CEFP)" },
-  { name: "Renaissance Securities", desc: "Issuing House and Financial Adviser to the Fund" },
+  {
+    name: "InfraCredit",
+    desc: "Provides AAA-rated guarantees under the Clean Energy Funding Programme (CEFP)",
+  },
+  {
+    name: "All On Energy",
+    desc: "Partner to the Fund",
+  },
   { name: "FundCo Capital Managers", desc: "SEC-regulated Fund Manager" },
 ];
 
 const governanceProcess = [
-  { icon: Eye, title: "Investment Screening", desc: "Rigorous assessment of project eligibility, climate alignment, and bankability" },
-  { icon: ShieldCheck, title: "Risk Review", desc: "Comprehensive risk analysis covering credit, operational, environmental, and social factors" },
-  { icon: CheckCircle2, title: "Portfolio Monitoring", desc: "Ongoing oversight of investee projects including financial performance and impact metrics" },
-  { icon: Scale, title: "Conflict Management", desc: "Clear policies and procedures for managing conflicts of interest across all stakeholders" },
+  {
+    icon: Eye,
+    title: "Investment Screening",
+    desc: "Rigorous assessment of project eligibility, climate alignment, and bankability",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Risk Review",
+    desc: "Comprehensive risk analysis covering credit, operational, environmental, and social factors",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Portfolio Monitoring",
+    desc: "Ongoing oversight of investee projects including financial performance and impact metrics",
+  },
+  {
+    icon: Scale,
+    title: "Conflict Management",
+    desc: "Clear policies and procedures for managing conflicts of interest across all stakeholders",
+  },
 ];
 
 const OurTeam = () => (
@@ -78,8 +112,8 @@ const OurTeam = () => (
           The Fund Manager has established an Investment Committee comprising
           senior and experienced professionals, including independent members
           with wide-ranging experience in clean energy investments, risk and
-          fund management. The four members of the IC collectively have more
-          than 100 years of investing and financing experience.
+          fund management. The six members of the IC collectively have more than
+          100 years of investing and financing experience.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -101,7 +135,9 @@ const OurTeam = () => (
                   {member.name.split(" ").slice(1).join(" ")}
                 </span>
               </h4>
-              <p className="text-sm text-muted-foreground mt-2 px-2">{member.bio}</p>
+              <p className="text-sm text-muted-foreground mt-2 px-2">
+                {member.bio}
+              </p>
             </div>
           ))}
         </div>
@@ -116,7 +152,11 @@ const OurTeam = () => (
           Fund Manager
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          FundCo Capital Managers Limited is authorised and registered by the Nigeria Securities & Exchange Commission to act as fund manager for the Clean Energy Local Currency Fund. The firm brings deep expertise in structured finance, fund management, and climate-aligned infrastructure investment.
+          FundCo Capital Managers Limited is authorised and registered by the
+          Nigeria Securities & Exchange Commission to act as fund manager for
+          the Clean Energy Local Currency Fund. The firm brings deep expertise
+          in structured finance, fund management, and climate-aligned
+          infrastructure investment.
         </p>
       </div>
     </section>
@@ -130,8 +170,12 @@ const OurTeam = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {advisers.map((a) => (
             <div key={a.role} className="bg-muted rounded-xl p-6">
-              <p className="text-xs text-secondary font-semibold uppercase tracking-wider mb-1">{a.role}</p>
-              <p className="font-heading font-bold text-foreground text-sm">{a.name}</p>
+              <p className="text-xs text-secondary font-semibold uppercase tracking-wider mb-1">
+                {a.role}
+              </p>
+              <p className="font-heading font-bold text-foreground text-sm">
+                {a.name}
+              </p>
             </div>
           ))}
         </div>
@@ -146,8 +190,13 @@ const OurTeam = () => (
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {partners.map((p) => (
-            <div key={p.name} className="bg-background rounded-xl p-6 shadow-sm">
-              <h4 className="font-heading font-bold text-foreground mb-2">{p.name}</h4>
+            <div
+              key={p.name}
+              className="bg-background rounded-xl p-6 shadow-sm"
+            >
+              <h4 className="font-heading font-bold text-foreground mb-2">
+                {p.name}
+              </h4>
               <p className="text-sm text-muted-foreground">{p.desc}</p>
             </div>
           ))}
@@ -165,7 +214,9 @@ const OurTeam = () => (
           {governanceProcess.map((g) => (
             <div key={g.title} className="bg-muted rounded-xl p-6 text-center">
               <g.icon className="text-secondary mx-auto mb-3" size={28} />
-              <h4 className="font-heading font-bold text-foreground text-sm mb-2">{g.title}</h4>
+              <h4 className="font-heading font-bold text-foreground text-sm mb-2">
+                {g.title}
+              </h4>
               <p className="text-xs text-muted-foreground">{g.desc}</p>
             </div>
           ))}
