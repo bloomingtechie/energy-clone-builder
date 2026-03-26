@@ -323,7 +323,7 @@ const Index = () => (
     <section className="py-16 md:py-20">
       <div className="section-container max-w-4xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-6">
-          Why CeF Is Additional
+          Why CeF?
         </h2>
         <p className="text-muted-foreground leading-relaxed">
           Commercial financing in Nigeria often does not provide long-term local

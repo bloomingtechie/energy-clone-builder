@@ -11,6 +11,8 @@ import allon from "@/assets/allon.png";
 import oak from "@/assets/oak.png";
 import Cardinal from "@/assets/Cardinal.png";
 import fundco from "@/assets/fundco.png";
+import nupemco from "@/assets/nupemco.png";
+import VGPensions from "@/assets/VGPensions.png";
 import { Download, FileText } from "lucide-react";
 
 const tabs = [
@@ -31,6 +33,8 @@ const logoMap: Record<string, string> = {
   "Oak Pensions": oak,
   "CardinalStone Pensions": Cardinal,
   "FundCo Capital Managers Limited": fundco,
+  "Veritas Glanvills Pensions": VGPensions,
+  "Nigerian University Pension Management (NUPEMCO)": nupemco,
 };
 
 const series1Investors = [
@@ -64,12 +68,14 @@ const impactVideos = [
   {
     title: "GroSolar & CeF",
     type: "iframe" as const,
-    embedUrl: "https://drive.google.com/file/d/1xAemYMZWNuydV7o3HZ-_h4gxomwUhA8m/preview",
+    embedUrl:
+      "https://drive.google.com/file/d/1xAemYMZWNuydV7o3HZ-_h4gxomwUhA8m/preview",
   },
   {
     title: "CeF Impact Story",
     type: "iframe" as const,
-    embedUrl: "https://drive.google.com/file/d/1f9jv9k9LO53s2NQ2EusBeqITGNVmqEYS/preview",
+    embedUrl:
+      "https://drive.google.com/file/d/1f9jv9k9LO53s2NQ2EusBeqITGNVmqEYS/preview",
   },
   {
     title: "CEF Impact Story Pass 4",
@@ -80,7 +86,11 @@ const impactVideos = [
 
 const documents = [
   { name: "About Fund", file: aboutPdf, filename: "CeF-lc.pdf" },
-  { name: "Fund Factsheet", file: factsheetPdf, filename: "Factsheet-26032026.pdf" },
+  {
+    name: "Fund Factsheet",
+    file: factsheetPdf,
+    filename: "Factsheet-26032026.pdf",
+  },
 ];
 
 const InvestorsRelation = () => {
@@ -146,9 +156,9 @@ const InvestorsTable = () => {
   return (
     <div>
       <p className="text-sm text-muted-foreground mb-4">
-        This diversified investor base reflects strong institutional participation
-        across multiple funding series, demonstrating sustained confidence in
-        CeF's investment strategy and performance.
+        This diversified investor base reflects strong institutional
+        participation across multiple funding series, demonstrating sustained
+        confidence in CeF's investment strategy and performance.
       </p>
 
       {/* Series Toggle */}
@@ -172,32 +182,52 @@ const InvestorsTable = () => {
         <table className="w-full border-collapse">
           <thead>
             <tr className="cef-gradient-bg text-primary-foreground">
-              <th className="px-4 py-3 text-left text-sm font-semibold">Logo</th>
-              <th className="px-4 py-3 text-left text-sm font-semibold">Investor</th>
-              <th className="px-4 py-3 text-left text-sm font-semibold">Holding</th>
+              <th className="px-4 py-3 text-left text-sm font-semibold">
+                Logo
+              </th>
+              <th className="px-4 py-3 text-left text-sm font-semibold">
+                Investor
+              </th>
+              <th className="px-4 py-3 text-left text-sm font-semibold">
+                Holding
+              </th>
             </tr>
           </thead>
           <tbody>
             {investors.map((inv, i) => {
               const logo = logoMap[inv.name];
               return (
-                <tr key={inv.name} className={i % 2 === 0 ? "bg-muted" : "bg-background"}>
+                <tr
+                  key={inv.name}
+                  className={i % 2 === 0 ? "bg-muted" : "bg-background"}
+                >
                   <td className="px-4 py-3">
                     <div className="w-20 h-12 flex items-center justify-center">
                       {logo ? (
-                        <img src={logo} alt={inv.name} className="max-h-10 w-auto object-contain" loading="lazy" />
+                        <img
+                          src={logo}
+                          alt={inv.name}
+                          className="max-h-10 w-auto object-contain"
+                          loading="lazy"
+                        />
                       ) : (
                         <div className="w-16 h-10 rounded bg-muted-foreground/10" />
                       )}
                     </div>
                   </td>
-                  <td className="px-4 py-3 text-sm text-foreground">{inv.name}</td>
-                  <td className="px-4 py-3 text-sm text-foreground font-medium">{inv.pct}</td>
+                  <td className="px-4 py-3 text-sm text-foreground">
+                    {inv.name}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-foreground font-medium">
+                    {inv.pct}
+                  </td>
                 </tr>
               );
             })}
             <tr className="bg-muted font-bold">
-              <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>Total</td>
+              <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>
+                Total
+              </td>
               <td className="px-4 py-3 text-sm text-foreground">100%</td>
             </tr>
           </tbody>
@@ -225,7 +255,9 @@ const ImpactStoryTab = () => (
             className="w-full h-full border-0"
           />
         </div>
-        <p className="text-sm text-muted-foreground text-center mt-4">{video.title}</p>
+        <p className="text-sm text-muted-foreground text-center mt-4">
+          {video.title}
+        </p>
       </div>
     ))}
   </div>
@@ -244,21 +276,32 @@ const DividendTable = () => (
         <thead>
           <tr className="cef-gradient-bg text-primary-foreground">
             <th className="px-4 py-3 text-left text-sm font-semibold">S/N</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold">Payment Date</th>
-            <th className="px-4 py-3 text-left text-sm font-semibold">Dividend Paid (₦)</th>
+            <th className="px-4 py-3 text-left text-sm font-semibold">
+              Payment Date
+            </th>
+            <th className="px-4 py-3 text-left text-sm font-semibold">
+              Dividend Paid (₦)
+            </th>
           </tr>
         </thead>
         <tbody>
           {dividends.map((d) => (
-            <tr key={d.sn} className={d.sn % 2 === 0 ? "bg-background" : "bg-muted"}>
+            <tr
+              key={d.sn}
+              className={d.sn % 2 === 0 ? "bg-background" : "bg-muted"}
+            >
               <td className="px-4 py-3 text-sm text-foreground">{d.sn}</td>
               <td className="px-4 py-3 text-sm text-foreground">{d.date}</td>
               <td className="px-4 py-3 text-sm text-foreground">{d.amount}</td>
             </tr>
           ))}
           <tr className="bg-muted font-bold">
-            <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>Total</td>
-            <td className="px-4 py-3 text-sm text-foreground">730,000,000.00</td>
+            <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>
+              Total
+            </td>
+            <td className="px-4 py-3 text-sm text-foreground">
+              730,000,000.00
+            </td>
           </tr>
         </tbody>
       </table>
@@ -271,7 +314,8 @@ const DocumentsTab = () => (
   <div className="space-y-4">
     <p className="text-sm text-muted-foreground mb-4">
       Download key fund documents for review. Additional documents including the
-      prospectus, impact brief, and governance summary will be made available shortly.
+      prospectus, impact brief, and governance summary will be made available
+      shortly.
     </p>
     {documents.map((doc) => (
       <a
@@ -281,7 +325,9 @@ const DocumentsTab = () => (
         className="flex items-center gap-4 bg-muted rounded-lg p-4 hover:shadow-md transition-shadow"
       >
         <FileText className="text-secondary flex-shrink-0" size={24} />
-        <span className="text-sm font-medium text-foreground flex-1">{doc.name}</span>
+        <span className="text-sm font-medium text-foreground flex-1">
+          {doc.name}
+        </span>
         <Download className="text-muted-foreground" size={18} />
       </a>
     ))}
@@ -289,7 +335,9 @@ const DocumentsTab = () => (
       <div key={name} className="bg-muted rounded-lg p-4 opacity-60">
         <div className="flex items-center gap-4">
           <FileText className="text-muted-foreground flex-shrink-0" size={24} />
-          <span className="text-sm text-muted-foreground flex-1">{name} — Coming Soon</span>
+          <span className="text-sm text-muted-foreground flex-1">
+            {name} — Coming Soon
+          </span>
         </div>
       </div>
     ))}
