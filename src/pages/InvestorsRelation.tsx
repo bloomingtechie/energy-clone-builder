@@ -36,16 +36,26 @@ const dividends = [
 ];
 
 const impactVideos = [
-  { id: "JXhJeJule8Y", title: "CEF Impact Story Pass 4 1" },
+  {
+    title: "GroSolar & CeF",
+    type: "iframe" as const,
+    embedUrl: "https://drive.google.com/file/d/1xAemYMZWNuydV7o3HZ-_h4gxomwUhA8m/preview",
+  },
+  {
+    title: "CeF Impact Story",
+    type: "iframe" as const,
+    embedUrl: "https://drive.google.com/file/d/1f9jv9k9LO53s2NQ2EusBeqITGNVmqEYS/preview",
+  },
+  {
+    title: "CEF Impact Story Pass 4",
+    type: "youtube" as const,
+    videoId: "JXhJeJule8Y",
+  },
 ];
 
 const documents = [
   { name: "Fund Factsheet", file: factsheetPdf, filename: "CeF-lc.pdf" },
 ];
-
-const getYouTubeEmbedUrl = (videoId: string) =>
-  `https://www.youtube.com/embed/${videoId}`;
-
 const InvestorsRelation = () => {
   const [activeTab, setActiveTab] = useState(0);
 
