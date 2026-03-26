@@ -36,16 +36,26 @@ const dividends = [
 ];
 
 const impactVideos = [
-  { id: "JXhJeJule8Y", title: "CEF Impact Story Pass 4 1" },
+  {
+    title: "GroSolar & CeF",
+    type: "iframe" as const,
+    embedUrl: "https://drive.google.com/file/d/1xAemYMZWNuydV7o3HZ-_h4gxomwUhA8m/preview",
+  },
+  {
+    title: "CeF Impact Story",
+    type: "iframe" as const,
+    embedUrl: "https://drive.google.com/file/d/1f9jv9k9LO53s2NQ2EusBeqITGNVmqEYS/preview",
+  },
+  {
+    title: "CEF Impact Story Pass 4",
+    type: "youtube" as const,
+    videoId: "JXhJeJule8Y",
+  },
 ];
 
 const documents = [
   { name: "Fund Factsheet", file: factsheetPdf, filename: "CeF-lc.pdf" },
 ];
-
-const getYouTubeEmbedUrl = (videoId: string) =>
-  `https://www.youtube.com/embed/${videoId}`;
-
 const InvestorsRelation = () => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -135,11 +145,15 @@ const InvestorsTable = () => (
 
 const ImpactStoryTab = () => (
   <div className="space-y-8">
-    {impactVideos.map((video) => (
-      <div key={video.id} className="bg-muted rounded-xl p-6">
+    {impactVideos.map((video, idx) => (
+      <div key={idx} className="bg-muted rounded-xl p-6">
         <div className="w-full max-w-2xl mx-auto aspect-video rounded-lg overflow-hidden">
           <iframe
-            src={getYouTubeEmbedUrl(video.id)}
+            src={
+              video.type === "youtube"
+                ? `https://www.youtube.com/embed/${video.videoId}`
+                : video.embedUrl
+            }
             title={video.title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
