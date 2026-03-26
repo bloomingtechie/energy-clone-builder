@@ -145,11 +145,15 @@ const InvestorsTable = () => (
 
 const ImpactStoryTab = () => (
   <div className="space-y-8">
-    {impactVideos.map((video) => (
-      <div key={video.id} className="bg-muted rounded-xl p-6">
+    {impactVideos.map((video, idx) => (
+      <div key={idx} className="bg-muted rounded-xl p-6">
         <div className="w-full max-w-2xl mx-auto aspect-video rounded-lg overflow-hidden">
           <iframe
-            src={getYouTubeEmbedUrl(video.id)}
+            src={
+              video.type === "youtube"
+                ? `https://www.youtube.com/embed/${video.videoId}`
+                : video.embedUrl
+            }
             title={video.title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
