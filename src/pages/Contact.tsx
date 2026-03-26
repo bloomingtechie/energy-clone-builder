@@ -3,6 +3,7 @@ import { Mail, MapPin } from "lucide-react";
 import SEO from "@/components/SEO";
 import PageBanner from "@/components/PageBanner";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -17,12 +18,42 @@ const subjectOptions = [
 
 const Contact = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Message Sent", description: "Thank you for reaching out. We'll get back to you soon." });
-    setForm({ name: "", email: "", phone: "", subject: "" });
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      toast({ title: "Invalid Email", description: "Please enter a valid email address.", variant: "destructive" });
+      return;
+    }
+
+    setSending(true);
+    try {
+      const res = await fetch("https://cleanenergyfund-api.vercel.app/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Failed");
+
+      toast({
+        title: "Message Sent",
+        description: "Thank you. Your enquiry has been received. We will respond within 3–5 business days.",
+      });
+      setForm({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch {
+      toast({
+        title: "Submission Failed",
+        description: "There was an issue submitting your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -87,8 +118,15 @@ const Contact = () => {
                     <option key={s} value={s}>{s}</option>
                   ))}
                 </select>
-                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:opacity-90">
-                  ✓ Submit
+                <Textarea
+                  placeholder="Message*"
+                  required
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  className="min-h-[120px]"
+                />
+                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:opacity-90" disabled={sending}>
+                  {sending ? "Sending..." : "✓ Submit"}
                 </Button>
               </form>
             </div>
