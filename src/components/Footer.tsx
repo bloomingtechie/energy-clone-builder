@@ -8,13 +8,14 @@ const Footer = () => (
     <div className="section-container">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <div className="h-12 w-40 rounded flex items-center justify-center mb-3">
+          <div className="mb-3">
             <img
               src={cef}
               alt="Clean Energy Local Currency Fund"
-              className="h-10 md:h-14 w-auto"
+              className="h-12 w-auto object-contain"
             />
           </div>
+
           <p className="text-sm opacity-80">
             Financing Nigeria's energy transition through local currency climate
             infrastructure investment.
@@ -87,13 +88,14 @@ const Footer = () => (
           </p>
         </div>
         <div>
-          <div className="h-12 w-40 rounded flex items-center justify-center mb-3">
+          <div className="mb-3">
             <img
               src={FundCo}
               alt="FundCo Capital Managers"
-              className="h-10 md:h-14 w-auto"
+              className="h-12 w-auto object-contain"
             />
           </div>
+
           <p className="text-sm opacity-80">
             FundCo Capital Managers is authorised by the Nigeria SEC to act as
             fund manager for CeF.
