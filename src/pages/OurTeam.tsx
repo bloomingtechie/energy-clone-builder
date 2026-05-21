@@ -16,6 +16,8 @@ import humprehy from "@/assets/humprehy.png";
 import wella from "@/assets/wella.png";
 import emi from "@/assets/emi.png";
 import ojuru from "@/assets/ojuru.png";
+import clark from "@/assets/clark.png";
+
 
 const investmentCommittee = [
   {
@@ -48,6 +50,12 @@ const investmentCommittee = [
     image: ojuru,
     bio: "Sector Lead, Digital Infrastucture & Green Growth, InfraCredit.",
   },
+  {
+    name: "Ebiripe K Clark",
+    image: clark,
+    bio: "Visiting Fellow, Africa Policy Research Institute (APRI) and Managing Partner, Frontier-Alpha LLP. A climate and development finance architect bridging capital markets execution and sovereign delivery across CBN, UKAID/DfID and InfraCorp. Designed Nigeria's power-sector liquidity and settlement interventions (NEMSF I–III, Payment Assurance Facilities I–II) and served as CBN liaison for the World Bank Power Sector Recovery Programme. Author of APRI papers on FX constraint, carbon-market sovereignty and dual transition finance.",
+  },
+
 ];
 
 const advisers = [
