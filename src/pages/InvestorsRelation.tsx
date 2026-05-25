@@ -77,6 +77,12 @@ const impactVideos = [
     embedUrl:
       "https://drive.google.com/file/d/1f9jv9k9LO53s2NQ2EusBeqITGNVmqEYS/preview",
   },
+    {
+    title: "InfraCredit Clean Energy Funding Programme",
+    type: "iframe" as const,
+    embedUrl:
+      "https://drive.google.com/file/d/1P1Pl65Uz8sDz39x0VuAQW6w1H1ayYysr/preview",
+  },
   {
     title: "CEF Impact Story Pass 4",
     type: "youtube" as const,
