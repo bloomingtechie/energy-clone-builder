@@ -17,6 +17,7 @@ import wella from "@/assets/wella.png";
 import emi from "@/assets/emi.png";
 import ojuru from "@/assets/ojuru.png";
 import clark from "@/assets/clark.png";
+import dreefLogo from "@/assets/dreef-logo-color.svg";
 
 
 const investmentCommittee = [
@@ -76,6 +77,14 @@ const partners = [
     desc: "Partner to the Fund",
   },
   { name: "FundCo Capital Managers", desc: "SEC-regulated Fund Manager" },
+];
+
+const backedInitiatives = [
+  {
+    name: "DREEF",
+    logo: dreefLogo,
+    desc: "The Distributed Renewable Energy Enhancement Facility is a project-preparation facility established by InfraCredit and backed by the World Bank Group, KfW, Convergence — and the Clean Energy Local Currency Fund itself, which is one of DREEF's supporters, helping accelerate bankable distributed renewable energy projects across Nigeria.",
+  },
 ];
 
 const governanceProcess = [
@@ -206,6 +215,39 @@ const OurTeam = () => (
                 {p.name}
               </h4>
               <p className="text-sm text-muted-foreground">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Initiatives We Back */}
+    <section className="py-16 md:py-20">
+      <div className="section-container max-w-4xl mx-auto">
+        <h2 className="font-heading font-bold text-2xl text-foreground mb-3 uppercase tracking-wider text-center">
+          Initiatives We Back
+        </h2>
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
+          Beyond its own portfolio, the Fund supports complementary initiatives
+          that strengthen Nigeria's clean energy financing ecosystem.
+        </p>
+        <div className="grid grid-cols-1 gap-6">
+          {backedInitiatives.map((b) => (
+            <div
+              key={b.name}
+              className="bg-muted rounded-xl p-6 md:p-8 shadow-sm flex flex-col sm:flex-row items-center gap-6"
+            >
+              <div className="bg-background rounded-lg p-4 flex items-center justify-center shrink-0">
+                <img
+                  src={b.logo}
+                  alt={`${b.name} logo`}
+                  className="h-10 md:h-12 w-auto"
+                  loading="lazy"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground text-center sm:text-left">
+                {b.desc}
+              </p>
             </div>
           ))}
         </div>
