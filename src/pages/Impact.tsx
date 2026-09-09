@@ -1,6 +1,7 @@
 import PageBanner from "@/components/PageBanner";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
+import impactFamily from "@/assets/impact-nigerian-family.jpg";
 import {
   Leaf,
   Zap,
@@ -44,7 +45,7 @@ const Impact = () => (
       description="Discover CeF's climate and development impact — 21,000+ tonnes CO₂ avoided, 370+ jobs created, 5,000+ energy connections enabled across Nigeria."
       path="/impact"
     />
-    <PageBanner title="Impact & Additionality" />
+    <PageBanner title="Impact & Additionality" image={impactFamily} />
 
     {/* Climate Impact */}
     <section className="py-16 md:py-24">

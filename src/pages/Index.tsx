@@ -20,7 +20,7 @@ import {
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
-import heroSolar from "@/assets/hero-solar.jpg";
+import heroSolar from "@/assets/hero-solar-telecom.jpg";
 import climateBadge from "@/assets/climate-bonds-badge.png";
 import factsheetPdf from "@/assets/Factsheet-26032026.pdf";
 
