@@ -18,6 +18,7 @@ import emi from "@/assets/emi.png";
 import ojuru from "@/assets/ojuru.png";
 import clark from "@/assets/clark.png";
 import dreefLogo from "@/assets/dreef-logo-color.svg";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 
 const investmentCommittee = [
@@ -200,26 +201,7 @@ const OurTeam = () => (
     </section>
 
     {/* Strategic Partners */}
-    <section className="py-16 md:py-20 bg-muted">
-      <div className="section-container max-w-4xl mx-auto">
-        <h2 className="font-heading font-bold text-2xl text-foreground mb-8 uppercase tracking-wider text-center">
-          Strategic Partners
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {partners.map((p) => (
-            <div
-              key={p.name}
-              className="bg-background rounded-xl p-6 shadow-sm"
-            >
-              <h4 className="font-heading font-bold text-foreground mb-2">
-                {p.name}
-              </h4>
-              <p className="text-sm text-muted-foreground">{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <PartnerMarquee className="!bg-muted" />
 
     {/* Initiatives We Back */}
     <section className="py-16 md:py-20">

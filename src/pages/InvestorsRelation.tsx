@@ -14,6 +14,7 @@ import fundco from "@/assets/fundco.png";
 import nupemco from "@/assets/nupemco.png";
 import VGPensions from "@/assets/VGPensions.png";
 import { Download, FileText } from "lucide-react";
+import OwnershipDonut from "@/components/OwnershipDonut";
 
 const tabs = [
   "List of Our Investors",
@@ -395,60 +396,72 @@ const InvestorsTable = () => {
         ))}
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="cef-gradient-bg text-primary-foreground">
-              <th className="px-4 py-3 text-left text-sm font-semibold">
-                Logo
-              </th>
-              <th className="px-4 py-3 text-left text-sm font-semibold">
-                Investor
-              </th>
-              <th className="px-4 py-3 text-left text-sm font-semibold">
-                Holding
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {investors.map((inv, i) => {
-              const logo = logoMap[inv.name];
-              return (
-                <tr
-                  key={inv.name}
-                  className={i % 2 === 0 ? "bg-muted" : "bg-background"}
-                >
-                  <td className="px-4 py-3">
-                    <div className="w-20 h-12 flex items-center justify-center">
-                      {logo ? (
-                        <img
-                          src={logo}
-                          alt={inv.name}
-                          className="max-h-10 w-auto object-contain"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="w-16 h-10 rounded bg-muted-foreground/10" />
-                      )}
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 text-sm text-foreground">
-                    {inv.name}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-foreground font-medium">
-                    {inv.pct}
-                  </td>
-                </tr>
-              );
-            })}
-            <tr className="bg-muted font-bold">
-              <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>
-                Total
-              </td>
-              <td className="px-4 py-3 text-sm text-foreground">100%</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="flex flex-col lg:flex-row gap-8 items-start">
+        <div className="overflow-x-auto flex-1">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="cef-gradient-bg text-primary-foreground">
+                <th className="px-4 py-3 text-left text-sm font-semibold">
+                  Logo
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-semibold">
+                  Investor
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-semibold">
+                  Holding
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {investors.map((inv, i) => {
+                const logo = logoMap[inv.name];
+                return (
+                  <tr
+                    key={inv.name}
+                    className={i % 2 === 0 ? "bg-muted" : "bg-background"}
+                  >
+                    <td className="px-4 py-3">
+                      <div className="w-20 h-12 flex items-center justify-center">
+                        {logo ? (
+                          <img
+                            src={logo}
+                            alt={inv.name}
+                            className="max-h-10 w-auto object-contain"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="w-16 h-10 rounded bg-muted-foreground/10" />
+                        )}
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-foreground">
+                      {inv.name}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-foreground font-medium">
+                      {inv.pct}
+                    </td>
+                  </tr>
+                );
+              })}
+              <tr className="bg-muted font-bold">
+                <td className="px-4 py-3 text-sm text-foreground" colSpan={2}>
+                  Total
+                </td>
+                <td className="px-4 py-3 text-sm text-foreground">100%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="w-full lg:w-80 flex-shrink-0">
+          <OwnershipDonut
+            title={`Series ${series} Ownership`}
+            data={investors.map((inv) => ({
+              name: inv.name,
+              pct: parseFloat(inv.pct),
+            }))}
+          />
+        </div>
       </div>
     </div>
   );

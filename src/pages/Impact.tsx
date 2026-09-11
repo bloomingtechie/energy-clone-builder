@@ -12,6 +12,7 @@ import {
   ArrowRight,
   CheckCircle2,
 } from "lucide-react";
+import CountUpMetric from "@/components/CountUpMetric";
 
 const climateImpact = [
   { value: "21,000+", label: "Estimated CO₂ emissions avoided (tCO₂e)", icon: Leaf },
@@ -57,7 +58,10 @@ const Impact = () => (
           {climateImpact.map((m) => (
             <div key={m.label} className="bg-muted rounded-xl p-8 text-center">
               <m.icon className="text-secondary mx-auto mb-3" size={36} />
-              <p className="text-3xl md:text-4xl font-heading font-bold text-foreground">{m.value}</p>
+              <CountUpMetric
+                value={m.value}
+                className="text-3xl md:text-4xl font-heading font-bold text-foreground"
+              />
               <p className="text-sm text-muted-foreground mt-2">{m.label}</p>
             </div>
           ))}
@@ -75,7 +79,10 @@ const Impact = () => (
           {devImpact.map((m) => (
             <div key={m.label} className="bg-background rounded-xl p-8 text-center shadow-sm">
               <m.icon className="text-secondary mx-auto mb-3" size={36} />
-              <p className="text-3xl md:text-4xl font-heading font-bold text-foreground">{m.value}</p>
+              <CountUpMetric
+                value={m.value}
+                className="text-3xl md:text-4xl font-heading font-bold text-foreground"
+              />
               <p className="text-sm text-muted-foreground mt-2">{m.label}</p>
             </div>
           ))}

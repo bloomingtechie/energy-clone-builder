@@ -23,6 +23,8 @@ import {
 import heroSolar from "@/assets/hero-solar-telecom.jpg";
 import climateBadge from "@/assets/climate-bonds-badge.png";
 import factsheetPdf from "@/assets/Factsheet-26032026.pdf";
+import PartnerMarquee from "@/components/PartnerMarquee";
+import CountUpMetric from "@/components/CountUpMetric";
 
 const sectors = [
   { icon: Zap, label: "Energy Access", desc: "Mini-grids, solar home systems" },
@@ -210,9 +212,10 @@ const Index = () => (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {impactMetrics.map((m) => (
             <div key={m.label}>
-              <p className="text-3xl md:text-4xl font-heading font-bold text-secondary">
-                {m.value}
-              </p>
+              <CountUpMetric
+                value={m.value}
+                className="text-3xl md:text-4xl font-heading font-bold text-secondary"
+              />
               <p className="text-primary-foreground/80 text-sm mt-1">
                 {m.label}
               </p>
@@ -221,6 +224,9 @@ const Index = () => (
         </div>
       </div>
     </section>
+
+    {/* Partners & Investors */}
+    <PartnerMarquee />
 
     {/* Credibility */}
     <section className="py-14 md:py-20 bg-muted">
