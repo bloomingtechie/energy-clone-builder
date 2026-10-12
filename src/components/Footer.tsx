@@ -83,8 +83,7 @@ const Footer = () => (
           <h4 className="font-heading font-semibold mb-3">Contact</h4>
           <p className="text-sm opacity-80">info@cleanenergyfund.ng</p>
           <p className="text-sm opacity-80 mt-2">
-            6th Floor Landmark Towers, 5B Water Corporation Way Oniru, Victoria
-            Island, Lagos.
+            Plot 1610, Adeola Hopewell Street, Victoria Island, Lagos.
           </p>
         </div>
         <div>

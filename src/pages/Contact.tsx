@@ -86,8 +86,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-heading font-bold text-foreground">Head office address:</h4>
-                  <p className="text-muted-foreground">6th Floor Landmark Towers,</p>
-                  <p className="text-muted-foreground">5B Water Corporation Way Oniru,</p>
+                  <p className="text-muted-foreground">Plot 1610, Adeola Hopewell Street,</p>
                   <p className="text-muted-foreground">Victoria Island, Lagos.</p>
                 </div>
               </div>
